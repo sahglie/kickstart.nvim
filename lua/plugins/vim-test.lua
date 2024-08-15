@@ -11,7 +11,7 @@ return {
     vim.keymap.set('n', '<leader>l', ':TestLast<CR>')
     vim.keymap.set('n', '<leader>g', ':TestVisit<CR>')
 
-    vim.g['test#custom_transformations'] = { docker = docker_transform }
-    vim.g['test#transformation'] = 'docker'
+    --vim.g['test#custom_transformations'] = { docker = docker_transform }
+    --vim.g['test#transformation'] = 'docker'
   end,
 }

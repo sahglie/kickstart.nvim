@@ -20,7 +20,7 @@ return {
       --vim.keymap.set('n', '<leader>g', builtin.live_grep, {})
       vim.keymap.set('n', '<leader>b', builtin.buffers, {})
       vim.keymap.set('n', '<leader>H', builtin.help_tags, {})
-      vim.keymap.set('n', '<leader>a', builtin.commands, {})
+      vim.keymap.set('n', '<leader>A', builtin.commands, {})
       vim.keymap.set('n', '<leader>m', builtin.registers, {})
       vim.keymap.set('n', '<leader>k', builtin.keymaps, {})
       vim.keymap.set('n', '<leader>J', builtin.jumplist, {})

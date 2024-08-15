@@ -93,10 +93,10 @@ vim.keymap.set('n', '<leader>d', ':bp<bar>vs<bar>bn<bar>bd<cr>')
 vim.keymap.set('n', '<leader>gr', ':!go run  %')
 
 -- Navigate vim panes better
-vim.keymap.set('n', '<c-h>', ':wincmd h<CR>')
-vim.keymap.set('n', '<c-j>', ':wincmd j<CR>')
-vim.keymap.set('n', '<c-k>', ':wincmd k<CR>')
-vim.keymap.set('n', '<c-l>', ':wincmd l<CR>')
+--vim.keymap.set('n', '<c-h>', ':wincmd h<CR>')
+--vim.keymap.set('n', '<c-j>', ':wincmd j<CR>')
+--vim.keymap.set('n', '<c-k>', ':wincmd k<CR>')
+--vim.keymap.set('n', '<c-l>', ':wincmd l<CR>')
 
 -- Highlight when yanking (copying) text
 --  Try it with `yap` in normal mode

@@ -120,12 +120,6 @@ vim.filetype.add {
 vim.api.nvim_create_autocmd('FileType', {
   pattern = { 'go' },
   callback = function()
-    --vim.keymap.set('n', '<leader>b', ':<C-u>call <SID>build_go_files()<CR>')
     vim.keymap.set('n', '<leader>r', ':!go run %')
-    vim.keymap.set('n', '<leader>t', '<Plug>(go-test)')
   end,
 })
---vim.keymap.set('n', '<leader>gt', ':exec \':!go test \' . expand("%:.")')
---autocmd FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
---autocmd FileType go nmap <leader>r  :exec ':!go run ' . expand("%:.")
---autocmd FileType go nmap <leader>t  <Plug>(go-test)

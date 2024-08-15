@@ -69,6 +69,8 @@ vim.opt.scrolloff = 10
 vim.opt.hlsearch = true
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
+vim.opt.termguicolors = true
+--vim.cmd'colorscheme yourfavcolorscheme'
 vim.cmd.set 'expandtab'
 vim.cmd.set 'number'
 vim.cmd.set 'tabstop=2'
@@ -79,10 +81,6 @@ vim.keymap.set('n', '<leader>y', '"*yy')
 vim.keymap.set('v', '<leader>y', '"*y')
 vim.keymap.set('n', '<leader>p', '"*p')
 vim.keymap.set('n', '<leader>.', '<c-^>')
-vim.keymap.set('n', '<c-h>', '<c-w>h')
-vim.keymap.set('n', '<c-j>', '<c-w>j')
-vim.keymap.set('n', '<c-k>', '<c-w>k')
-vim.keymap.set('n', '<c-l>', '<c-w>l')
 vim.keymap.set('n', 'H', '^')
 vim.keymap.set('n', 'L', '$')
 vim.keymap.set('n', 'U', 'mmviw~`m')
@@ -93,6 +91,12 @@ vim.keymap.set('n', ';', ":call nerdcommenter#Comment('n', 'Toggle')<cr>")
 vim.keymap.set('v', ';', ":call nerdcommenter#Comment('v', 'Toggle')<cr>")
 vim.keymap.set('n', '<leader>d', ':bp<bar>vs<bar>bn<bar>bd<cr>')
 vim.keymap.set('n', '<leader>gr', ':!go run  %')
+
+-- Navigate vim panes better
+vim.keymap.set('n', '<c-h>', ':wincmd h<CR>')
+vim.keymap.set('n', '<c-j>', ':wincmd j<CR>')
+vim.keymap.set('n', '<c-k>', ':wincmd k<CR>')
+vim.keymap.set('n', '<c-l>', ':wincmd l<CR>')
 
 -- Highlight when yanking (copying) text
 --  Try it with `yap` in normal mode
@@ -108,6 +112,8 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 vim.filetype.add {
   extension = {
     templ = 'templ',
+    go = 'go',
+    ruby = 'ruby',
   },
 }
 

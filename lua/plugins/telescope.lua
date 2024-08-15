@@ -1,10 +1,11 @@
-return { 
+return {
   {
-    "nvim-telescope/telescope.nvim", tag = "0.1.6",
-    dependencies = { "nvim-lua/plenary.nvim" },
+    'nvim-telescope/telescope.nvim',
+    tag = '0.1.6',
+    dependencies = { 'nvim-lua/plenary.nvim' },
     config = function()
-      local builtin = require("telescope.builtin")
-      vim.keymap.set("n", "<leader>sg", builtin.live_grep, {})
+      local builtin = require 'telescope.builtin'
+      vim.keymap.set('n', '<leader>sg', builtin.live_grep, {})
       vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = '[S]earch [H]elp' })
       vim.keymap.set('n', '<leader>sk', builtin.keymaps, { desc = '[S]earch [K]eymaps' })
       --vim.keymap.set('n', '<leader>sf', builtin.find_files, { desc = '[S]earch [F]iles' })
@@ -24,21 +25,21 @@ return {
       vim.keymap.set('n', '<leader>k', builtin.keymaps, {})
       vim.keymap.set('n', '<leader>J', builtin.jumplist, {})
       vim.keymap.set('n', '<leader>x', builtin.quickfix, {})
-    end
+    end,
   },
   {
-    "nvim-telescope/telescope-ui-select.nvim",
+    'nvim-telescope/telescope-ui-select.nvim',
     conifg = function()
-      require("telescope").setup {
+      require('telescope').setup {
         extensions = {
-          ["ui-select"] = {
-            require("telescope.themes").get_dropdown {
+          ['ui-select'] = {
+            require('telescope.themes').get_dropdown {
               -- even more opts
-            }
-          }
-        }
+            },
+          },
+        },
       }
-      require("telescope").load_extension("ui-select")
-    end
-  }
+      require('telescope').load_extension 'ui-select'
+    end,
+  },
 }

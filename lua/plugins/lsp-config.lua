@@ -22,13 +22,24 @@ return {
 
       lspconfig.lua_ls.setup { capabilities = capabilities }
       lspconfig.ruby_lsp.setup { capabilities = capabilities }
-      lspconfig.gopls.setup { capabilities = capabilities }
       lspconfig.templ.setup { capabilities = capabilities }
-      --lspconfig.html.setup({
-      --on_attach = on_attach,
-      --capabilities = capabilities,
-      --  filetypes = { "html", "templ" },
-      --})
+      --lspconfig.gopls.setup { capabilities = capabilities }
+      lspconfig.gopls.setup {
+        --on_attach = on_attach,
+        capabilities = capabilities,
+        cmd = { 'gopls' },
+        filetypes = { 'go', 'gomod', 'gowork', 'gotmpl' },
+        --root_dir = util.root_pattern('go.work', 'go.mod', '.git'),
+        settings = {
+          gopls = {
+            completeUnimported = true,
+            usePlaceholders = true,
+            analyses = {
+              unusedparams = true,
+            },
+          },
+        },
+      }
 
       vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
       vim.keymap.set('n', '<leader>gd', vim.lsp.buf.definition, {})

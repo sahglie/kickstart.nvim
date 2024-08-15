@@ -14,8 +14,10 @@ return {
           'html',
         },
         auto_install = true,
-        highlight = { enabled = true },
-        indent = { enabled = true },
+        autopairs = { enable = true },
+        autotag = { enable = true },
+        highlight = { enable = true },
+        indent = { enable = true },
       }
     end,
   },
